@@ -15,21 +15,34 @@ If you'd like to use this code or paper, please cite:
 
 ## Theories, datasets, models, and metrics used in this paper
 - **Theories**: Matrix-Language Embedded Framework (1997), Intonation Unit Boundary Constraint (2023)
-- **Speech-to-Text Translation Dataset**: CoVoST 2 (2021), based on Common Voice Corpus 4.0 (2020)
+- **Speech-to-Text Translation Dataset**: CoVoST 2 (2021, specifically the En:rightarrow:X subset), based on Common Voice Corpus 4.0 (2020)
 - **Intonation Unit Detection**: PSST (2023), based on Whisper (2023)
 - **Word-level text-to-text aligner**: awesome-align (2021)
 - **Multilingual Neural Machine Translation (MNMT) Models**: Meta's M2M-100 418M (2021), NLLB-200 600M (2022)
 - **Metrics**: chrF++ (2017, character level), spBLEU (2022, tokenized language-agnostic metric level), COMET (2022, models human judgments of translations).
 
-## Code Structure
-The code structure is divided into subsections of *Section 2: Synthetic Data Generation* described in the paper.
-- **Intonation Unit Detection**:
+## Code Structure & Generation Pipeline
+The code structure mostly matches the subsections of *Section 2: Synthetic Data Generation* described in the paper.
+- Download [Common Voice 4.0]() into your local computer.
+- **Process CoVoST 2**: **generate_transcripts.py**
+    - Since CoVoST 2 is a speech-to-text translation dataset, we need to process both speech and text in the dataset.
+    - Usage: `python generate_transcripts.py`
+    - Creates a directory with 3 files per language pair:
+        - 1. English transcriptions (text): will be used to check whether PSST generates correct IU boundary-marked transcripts (used to check against transcription error).
+        - 2. Target translations (text): will be used in alignment step
+        - 3. Common Voice filenames used (text): will be used as input to PSST for IU boundary-marked transcripts.
+- *Intermediate step: Move Common Voice files to Google Drive (skip this step if you're using GPU locally)*
+    - `shell-scripts/tarzip_valid.sh`: is an example of how to zip local files to upload into Google Drive.
+- **Intonation Unit Detection**: **detect_intonation_unit.py**
+    - With English Common Voice files, we generate English transcripts marked with intonation unit boundaries by PSST.
+    - Usage: `python detect_intonation_unit.py`.
+    - Creates intonation unit boundary-marked English transcriptions.
 - **Alignment Generation**:
 - **Intonation Unit Replacement**:
 - **Dataset Evaluation and Analysis**:
 - **Running and Evaluating Translation Models**:
 
-All code were run on Google Colab with a single NVIDIA L4 GPU.
+All code (except for Common Voice transcript generation) were run on Google Colab with a single NVIDIA L4 GPU. Jupyter notebooks have been converted to Python scripts to facilitate future use. I have also included shell scripts I used in this project in the directory `shell-scripts`. `tarzip_valid.sh` is a shell script that I used to transfer Common Voice audio files from local to Google Drive after zipping them into tar. 
 
 ## Paper Summary
 There are 2 main code-switching linguistic theories I discovered while writing this paper. 
@@ -47,9 +60,12 @@ Following the **Matrix-Language Embedded Framework** and the **Intonation Unit B
 
 ## Tech Stack
 Python, HuggingFace transformers & datasets, Shell scripts
+HuggingFace transformers - AutoProcessor, AutoModel, AutoModelForSpeechSeq2Seq
 
 ## Future Directions
-Before I graduate in May 2025, I plan to create a fleursswitch dataset, created from Google's FLEURS. This will also be made available through my HuggingFace profile. I am also experimenting with non-English language pairs, which I am partially presenting at *Interspeech YFRSW 2024* this year (Kos, Greece), but this is mainly based on the speech-to-speech modality.
+Before I graduate in May 2025, I plan to create a fleursswitch dataset, created from Google's FLEURS. This will also be made available through my HuggingFace profile. I am also experimenting with non-English language pairs, which I am partially presenting at *Interspeech YFRSW 2024* this year (Kos, Greece), but this is mainly based on the speech-to-speech modality. 
+
+I note that this project was created with an English intonation unit detection model. I'm excited to see future work for IU detection on non-English languages.
 
 ## Paper Review
 Feedback I received from ACL reviewers on this paper are publicly available on OpenReview.
