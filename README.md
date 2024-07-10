@@ -47,7 +47,9 @@ All code (except for Common Voice transcript generation) were run on Google Cola
 
 ## Tech Stack
 Python, HuggingFace transformers & datasets, Shell scripts
+
 HuggingFace transformers - AutoProcessor, AutoModel, AutoModelForSpeechSeq2Seq
+
 Audio libraries: librosa
 
 ## Paper Summary
