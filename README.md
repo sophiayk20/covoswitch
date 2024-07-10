@@ -45,6 +45,11 @@ The code structure mostly matches the subsections of *Section 2: Synthetic Data 
 
 All code (except for Common Voice transcript generation) were run on Google Colab with a single NVIDIA L4 GPU. Jupyter notebooks have been converted to Python scripts to facilitate future use. I have also included shell scripts I used in this project in the directory `shell-scripts`. `tarzip_valid.sh` is a shell script that I used to transfer Common Voice audio files from local to Google Drive after zipping them into tar. 
 
+## Tech Stack
+Python, HuggingFace transformers & datasets, Shell scripts
+HuggingFace transformers - AutoProcessor, AutoModel, AutoModelForSpeechSeq2Seq
+Audio libraries: librosa
+
 ## Paper Summary
 There are 2 main code-switching linguistic theories I discovered while writing this paper. 
 - **Matrix-Language Embedded Framework (MLF)**: keeps one language as the matrix language and includes segments from an embedded language. 
@@ -58,10 +63,6 @@ So instead I paid attention to a recent prosodic constraint established in EMNLP
 Meanwhile, I also found that OpenAI's STT model Whisper can be fine-tuned to detect English prosodic boundaries [the PSST model, published in CoNLL 2023](https://aclanthology.org/2023.conll-1.31/). This means that Whisper can segment an English utterance into intonation units. 
 
 Following the **Matrix-Language Embedded Framework** and the **Intonation Unit Boundary Constraint**, I synthesized code-switching text data by switching languages using intonation units as basis units.
-
-## Tech Stack
-Python, HuggingFace transformers & datasets, Shell scripts
-HuggingFace transformers - AutoProcessor, AutoModel, AutoModelForSpeechSeq2Seq
 
 ## Future Directions
 Before I graduate in May 2025, I plan to create a fleursswitch dataset, created from Google's FLEURS. This will also be made available through my HuggingFace profile. I am also experimenting with non-English language pairs, which I am partially presenting at *Interspeech YFRSW 2024* this year (Kos, Greece), but this is mainly based on the speech-to-speech modality. 
