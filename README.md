@@ -15,10 +15,10 @@ Please cite:
 
 ## Pre-existing theories, datasets, models, and metrics used in this paper
 - **Theories**: Matrix-Language Embedded Framework (1997), Intonation Unit Boundary Constraint (2023)
-- **Speech-to-text Translation Dataset**: CoVoST 2 (2021)
+- **Speech-to-Text Translation Dataset**: CoVoST 2 (2021)
 - **Intonation Unit Detection**: PSST (2023), based on Whisper (2023)
 - **Word-level text-to-text aligner**: awesome-align (2021)
-- **Multilingual Neural Machine Translation (MNMT) models**: Meta's M2M-100 418M (2021), NLLB-200 600M (2022)
+- **Multilingual Neural Machine Translation (MNMT) Models**: Meta's M2M-100 418M (2021), NLLB-200 600M (2022)
 - **Metrics**: chrF++ (2017, character level), spBLEU (2022, tokenized language-agnostic metric level), COMET (2022, models human judgments of translations).
 
 ## Code Structure
