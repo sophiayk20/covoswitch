@@ -12,6 +12,10 @@ If you'd like to use this code or paper, please cite:
 ```
     Yeeun Kang. 2024. CoVoSwitch: Machine Translation of Synthetic Code-Switched Text Based on Intonation Units. In Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics: Student Research Workshop, pages -, Bangkok, Thailand. Association for Computational Linguistics. 
 ```
+## Topics & Keywords
+Multilingual code-switching translation (NMT), prosodic speech segmentation (intonation unit detection) using Whisper (STT)
+
+Keywords: code-switching, intonation units, machine translation, low-resource languages, speech-to-text, multilingual
 
 ## Theories, datasets, models, and metrics used in this paper
 - **Theories**: Matrix-Language Embedded Framework (1997), Intonation Unit Boundary Constraint (2023)
@@ -48,7 +52,7 @@ All code (except for Common Voice transcript generation) were run on Google Cola
 ## Tech Stack
 Python, HuggingFace transformers & datasets, Shell scripts
 
-HuggingFace transformers - AutoProcessor, AutoModel, AutoModelForSpeechSeq2Seq
+HuggingFace transformers - AutoTokenizer, AutoProcessor, AutoModel, AutoModelForSpeechSeq2Seq
 
 Audio libraries: librosa
 
