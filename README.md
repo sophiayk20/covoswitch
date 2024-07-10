@@ -27,6 +27,7 @@ The code structure mostly matches the subsections of *Section 2: Synthetic Data 
 - **Process CoVoST 2**: **generate_transcripts.py**
     - Since CoVoST 2 is a speech-to-text translation dataset, we need to process both speech and text in the dataset.
     - Usage: `python generate_transcripts.py --subset train`
+        - --subset argument must either be `train`, `validation`, or `test`
     - Creates a directory with 3 files per language pair:
         - 1. English transcriptions (text): will be used to check whether PSST generates correct IU boundary-marked transcripts (used to check against transcription error).
         - 2. Target translations (text): will be used in alignment step
