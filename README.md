@@ -8,7 +8,7 @@ The dataset I used in this paper is available through HuggingFace. It was create
 Link to paper: [to be made available here].
 Dataset: https://huggingface.co/sophiayk/covoswitch.
 
-Please cite:
+If you'd like to use this code or paper, please cite:
 ```
     Yeeun Kang. 2024. CoVoSwitch: Machine Translation of Synthetic Code-Switched Text Based on Intonation Units. In Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics: Student Research Workshop, pages -, Bangkok, Thailand. Association for Computational Linguistics. 
 ```
