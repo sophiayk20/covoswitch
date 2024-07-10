@@ -27,6 +27,7 @@ The code structure is divided into subsections of *Section 2: Synthetic Data Gen
 - **Alignment Generation**:
 - **Intonation Unit Replacement**:
 - **Dataset Evaluation and Analysis**:
+- **Running Translation Models**:
 
 All code were run on Google Colab with a single NVIDIA L4 GPU.
 
