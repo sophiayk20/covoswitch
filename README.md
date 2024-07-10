@@ -23,7 +23,7 @@ If you'd like to use this code or paper, please cite:
 
 ## Code Structure & Generation Pipeline
 The code structure mostly matches the subsections of *Section 2: Synthetic Data Generation* described in the paper.
-- Download [Common Voice 4.0]() into your local computer.
+- **Download Common Voice 4.0**: [Download here](https://commonvoice.mozilla.org/en/datasets) into your local computer.
 - **Process CoVoST 2**: **generate_transcripts.py**
     - Since CoVoST 2 is a speech-to-text translation dataset, we need to process both speech and text in the dataset.
     - Usage: `python generate_transcripts.py --subset train`
