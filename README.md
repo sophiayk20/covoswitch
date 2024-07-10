@@ -42,7 +42,7 @@ So instead I paid attention to a recent prosodic constraint established in EMNLP
 
 Meanwhile, I also found that OpenAI's STT model Whisper can be fine-tuned to detect English prosodic boundaries [the PSST model, published in CoNLL 2023](https://aclanthology.org/2023.conll-1.31/). This means that Whisper can segment an English utterance into intonation units. 
 
-Following the Matrix-Language Embedded Framework and the Intonation Unit Boundary Constraint, I synthesized code-switching text data by switching languages using intonation units as basis units.
+Following the **Matrix-Language Embedded Framework** and the **Intonation Unit Boundary Constraint**, I synthesized code-switching text data by switching languages using intonation units as basis units.
 
 ## Tech Stack
 Python, HuggingFace transformers & datasets, Shell scripts
