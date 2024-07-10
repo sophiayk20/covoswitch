@@ -13,6 +13,13 @@ Please cite:
     Yeeun Kang. 2024. CoVoSwitch: Machine Translation of Synthetic Code-Switched Text Based on Intonation Units. In Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics: Student Research Workshop, pages -, Bangkok, Thailand. Association for Computational Linguistics. 
 ```
 
+## Code Structure
+The code structure is divided into subsections of *Section 2: Synthetic Data Generation* described in the paper.
+- Intonation Unit Detection: 
+- Alignment Generation: 
+- Intonation Unit Replacement: 
+- Dataset Evaluation and Analysis: 
+
 ## Paper Summary
 There are 2 main code-switching linguistic theories I discovered while writing this paper. 
 - Matrix-Language Embedded Framework (MLF): keeps one language as the matrix language and includes segments from an embedded language. 
@@ -42,6 +49,10 @@ Before I graduate in May 2025, I plan to create a fleursswitch dataset, created 
 
 ## Paper Review
 Feedback I received from ACL reviewers on this paper are publicly available on OpenReview.
+
+## Other Tools of Potential Interest
+To those who find my repository or paper interesting, here are some further repositories that I discovered while writing this paper that may be of interest.
+- GCM: [GCM](https://github.com/microsoft/CodeMixed-Text-Generator), which generates code-switched text based on the EC Theory. Benepar & Stanford are both available as parsers and they offer a web interface for one-time generation.
 
 ## P.S. Personal Motivation & Background
 I grew up bilingual, splitting my time in the US & Korea, and my sister and I always converse with one another in a perfect mix of both languages. We have never been able to explain why we use some words in English and others in Korean, but recent research [EMNLP Proceedings 2023](https://aclanthology.org/2023.emnlp-main.1047/) demonstrated that code-switching is more common across intonation units, which I found very interesting. In the future, written and spoken language systems will likely need to handle multilingual inputs, and I believe code-switching research is an interesting starting point to advancing towards them. I tested MNMT models with my synthetic dataset because I had always been interested in multimodal translation systems, but I see many other potential fields of application.
