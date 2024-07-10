@@ -13,9 +13,9 @@ If you'd like to use this code or paper, please cite:
     Yeeun Kang. 2024. CoVoSwitch: Machine Translation of Synthetic Code-Switched Text Based on Intonation Units. In Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics: Student Research Workshop, pages -, Bangkok, Thailand. Association for Computational Linguistics. 
 ```
 
-## Pre-existing theories, datasets, models, and metrics used in this paper
+## Theories, datasets, models, and metrics used in this paper
 - **Theories**: Matrix-Language Embedded Framework (1997), Intonation Unit Boundary Constraint (2023)
-- **Speech-to-Text Translation Dataset**: CoVoST 2 (2021)
+- **Speech-to-Text Translation Dataset**: CoVoST 2 (2021), based on Common Voice Corpus 4.0 (2020)
 - **Intonation Unit Detection**: PSST (2023), based on Whisper (2023)
 - **Word-level text-to-text aligner**: awesome-align (2021)
 - **Multilingual Neural Machine Translation (MNMT) Models**: Meta's M2M-100 418M (2021), NLLB-200 600M (2022)
@@ -49,7 +49,7 @@ Following the **Matrix-Language Embedded Framework** and the **Intonation Unit B
 Python, HuggingFace transformers & datasets, Shell scripts
 
 ## Future Directions
-Before I graduate in May 2025, I plan to create a fleursswitch dataset, created from Google's FLEURS. This will also be made available through my HuggingFace profile. I am also experimenting with non-English language pairs, which I am partially presenting at Interspeech YFRSW 2024 this year (Kos, Greece), but this is mainly based on the speech-to-speech modality.
+Before I graduate in May 2025, I plan to create a fleursswitch dataset, created from Google's FLEURS. This will also be made available through my HuggingFace profile. I am also experimenting with non-English language pairs, which I am partially presenting at *Interspeech YFRSW 2024* this year (Kos, Greece), but this is mainly based on the speech-to-speech modality.
 
 ## Paper Review
 Feedback I received from ACL reviewers on this paper are publicly available on OpenReview.
