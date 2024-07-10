@@ -13,12 +13,20 @@ Please cite:
     Yeeun Kang. 2024. CoVoSwitch: Machine Translation of Synthetic Code-Switched Text Based on Intonation Units. In Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics: Student Research Workshop, pages -, Bangkok, Thailand. Association for Computational Linguistics. 
 ```
 
+## Pre-existing theories, datasets, models, and metrics used in this paper
+- **Theories**: Matrix-Language Embedded Framework (1997), Intonation Unit Boundary Constraint (2023)
+- **Speech-to-text Translation Dataset**: CoVoST 2 (2021)
+- **Intonation Unit Detection**: PSST (2023), based on Whisper (2023)
+- **Word-level text-to-text aligner**: awesome-align (2021)
+- **Multilingual Neural Machine Translation (MNMT) models**: Meta's M2M-100 418M (2021), NLLB-200 600M (2022)
+- **Metrics**: chrF++ (2017, character level), spBLEU (2022, tokenized language-agnostic metric level), COMET (2022, models human judgments of translations).
+
 ## Code Structure
 The code structure is divided into subsections of *Section 2: Synthetic Data Generation* described in the paper.
-- Intonation Unit Detection: 
-- Alignment Generation: 
-- Intonation Unit Replacement: 
-- Dataset Evaluation and Analysis: 
+- **Intonation Unit Detection**:
+- **Alignment Generation**:
+- **Intonation Unit Replacement**:
+- **Dataset Evaluation and Analysis**:
 
 ## Paper Summary
 There are 2 main code-switching linguistic theories I discovered while writing this paper. 
@@ -33,13 +41,6 @@ So instead I paid attention to a recent prosodic constraint established in EMNLP
 Meanwhile, I also found that OpenAI's STT model Whisper can be fine-tuned to detect English prosodic boundaries [the PSST model, published in CoNLL 2023](https://aclanthology.org/2023.conll-1.31/). This means that Whisper can segment an English utterance into intonation units. 
 
 Following the Matrix-Language Embedded Framework and the Intonation Unit Boundary Constraint, I synthesized code-switching text data by switching languages using intonation units as basis units.
-
-### Pre-existing theories, datasets, models, and metrics used in this paper
-- Pre-existing theories: Matrix-Language Embedded Framework (1997), Intonation Unit Boundary Constraint (2023)
-- Speech-to-text Translation Dataset: CoVoST 2 (2021)
-- Intonation Unit Detection: PSST (2023), based on Whisper (2023)
-- Multilingual Neural Machine Translation (MNMT) models: Meta's M2M-100 418M (2021), NLLB-200 600M (2022)
-- Metrics: chrF++ (2017, character level), spBLEU (2022, tokenized language-agnostic metric level), COMET (2022, models human judgments of translations).
 
 ## Tech Stack
 Python, HuggingFace transformers & datasets, Shell scripts
