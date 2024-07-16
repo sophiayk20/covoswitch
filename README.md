@@ -3,9 +3,10 @@
 ## Paper & Dataset
 This repository holds code used in writing "CoVoSwitch: Machine Translation of Synthetic Code-Switched Text Based on Intonation Units," to be published in *Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics: Student Research Workshop*. Paper was accepted on July 9, 2024 for ACL-SRW 2024 (Aug. 11-16 2024).
 
-The dataset I used in this paper is available through HuggingFace. It was created using CoVoST 2, which is a speech-to-text translation dataset created in turn from Common Voice Corpus 4.0. 
+CoVoSwitch, the dataset I created in this paper, is available through HuggingFace. It was created using CoVoST 2, which is a speech-to-text translation dataset created in turn from Common Voice Corpus 4.0. 
 
 Link to paper: [to be made available here].
+
 Dataset: https://huggingface.co/sophiayk/covoswitch.
 
 If you'd like to use this code or paper, please cite:
@@ -27,7 +28,7 @@ Keywords: code-switching, intonation units, machine translation, low-resource la
 
 ## Code Structure & Generation Pipeline
 The code structure mostly matches the subsections of *Section 2: Synthetic Data Generation* described in the paper.
-- **Download Common Voice 4.0**: [Download here](https://commonvoice.mozilla.org/en/datasets) into your local computer.
+- **Download Common Voice 4.0**: [Download here](https://commonvoice.mozilla.org/en/datasets) into your local workspace.
 - **Process CoVoST 2**: **generate_transcripts.py**
     - Since CoVoST 2 is a speech-to-text translation dataset, we need to process both speech and text in the dataset.
     - Usage: `python generate_transcripts.py --subset train`
@@ -37,11 +38,16 @@ The code structure mostly matches the subsections of *Section 2: Synthetic Data 
         - 2. Target translations (text): will be used in alignment step
         - 3. Common Voice filenames used (text): will be used as input to PSST for IU boundary-marked transcripts.
 - *Intermediate step: Move Common Voice files to Google Drive (skip this step if you're using GPU locally)*
-    - `shell-scripts/tarzip_valid.sh`: is an example of how to zip local files to upload into Google Drive.
+    - `shell-scripts/tarzip_valid.sh`: is an example of how to zip local files. You can subsequently upload them into your remote workspace (like Google Drive for Colab).
 - **Intonation Unit Detection**: **detect_intonation_unit.py**
     - With English Common Voice files, we generate English transcripts marked with intonation unit boundaries by PSST.
-    - Usage: `python detect_intonation_unit.py`.
+    - Usage: `python detect_IU.py --englishfilepath "some English file path" --boundaryfilepath "some boundary file path"`.
     - Creates intonation unit boundary-marked English transcriptions.
+    - PSST performs two functionalities, details of which can be found in Table 1 of the paper.
+        - Transcribing
+        - marking IU boundaries.
+    - `--englishfilename`: feed name of text file that stores all English Common Voice 4.0 filenames.
+    - `--boundaryfilename`: feed name of text file that will store all IU-detected transcripts, each separated by a newline.
 - **Alignment Generation**:
 - **Intonation Unit Replacement**:
 - **Dataset Evaluation and Analysis**:
