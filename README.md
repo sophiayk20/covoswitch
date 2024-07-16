@@ -20,7 +20,7 @@ Keywords: code-switching, intonation units, machine translation, low-resource la
 
 ## Theories, datasets, models, and metrics used in this paper
 - **Theories**: Matrix-Language Embedded Framework (1997), Intonation Unit Boundary Constraint (2023)
-- **Speech-to-Text Translation Dataset**: CoVoST 2 (2021, specifically the En:rightarrow:X subset), based on Common Voice Corpus 4.0 (2020)
+- **Speech-to-Text Translation Dataset**: CoVoST 2 (2021, specifically the En->X subset), based on Common Voice Corpus 4.0 (2020)
 - **Intonation Unit Detection**: PSST (2023), based on Whisper (2023)
 - **Word-level text-to-text aligner**: awesome-align (2021)
 - **Multilingual Neural Machine Translation (MNMT) Models**: Meta's M2M-100 418M (2021), NLLB-200 600M (2022)
@@ -30,6 +30,9 @@ Citations to all of these can be found in the references section of my paper.
 
 ## Code Structure & Generation Pipeline
 The code structure mostly matches the subsections of *Section 2: Synthetic Data Generation* described in the paper.
+
+If you would like an intro to how you would pull CoVoSwitch from HuggingFace Datasets, please refer to the evaluate section. 
+
 - **Download Common Voice 4.0**: [Download here](https://commonvoice.mozilla.org/en/datasets) into your local workspace.
 - **Process CoVoST 2**: **generate_transcripts.py**
     - Since CoVoST 2 is a speech-to-text translation dataset, we need to process both speech and text in the dataset.
@@ -64,6 +67,12 @@ The code structure mostly matches the subsections of *Section 2: Synthetic Data 
 - **Dataset Evaluation and Analysis**:
 - **Running Translation Models**:
 - **Evaluating Translation Performance**:
+    - There are two baselines, as described in section 3 of the paper.
+        - 1. Raw Code-Switched Inputs
+        - 2. Monolingual Translations
+    - So code in this section calculates NMT evaluation scores for raw code-switched inputs and monolingual baselines, and then calculates deltas that system translations of code-switched texts achieve from these two baselines.
+    - `evaluate_comet.ipynb`: Evaluation code for using COMET scores.
+        - COMET model: `Unbabel/wmt22-comet-da` model.
 
 All code (except for Common Voice transcript generation) were run on Google Colab with a single NVIDIA L4 GPU. Jupyter notebooks have been converted to Python scripts to facilitate future use. I have also included shell scripts I used in this project in the directory `shell-scripts`. `tarzip_valid.sh` is a shell script that I used to transfer Common Voice audio files from local to Google Drive after zipping them into tar. 
 
