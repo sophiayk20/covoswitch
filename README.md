@@ -41,7 +41,7 @@ The code structure mostly matches the subsections of *Section 2: Synthetic Data 
     - `shell-scripts/tarzip_valid.sh`: is an example of how to zip local files. You can subsequently upload them into your remote workspace (like Google Drive for Colab).
 - **Intonation Unit Detection**: **detect_intonation_unit.py**
     - With English Common Voice files, we generate English transcripts marked with intonation unit boundaries by PSST.
-    - Usage: `python detect_IU.py --englishfilepath "some English file path" --boundaryfilepath "some boundary file path"`.
+    - Usage: `python detect_IU.py --englishfilename "some English file path" --boundaryfilename "some boundary file path"`.
     - Creates intonation unit boundary-marked English transcriptions.
     - PSST performs two functionalities, details of which can be found in Table 1 of the paper.
         - Transcribing
