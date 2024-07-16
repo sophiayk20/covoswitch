@@ -71,6 +71,7 @@ If you would like an intro to how you would pull CoVoSwitch from HuggingFace Dat
         - 1. Raw Code-Switched Inputs
         - 2. Monolingual Translations
     - So code in this section calculates NMT evaluation scores for raw code-switched inputs and monolingual baselines, and then calculates deltas that system translations of code-switched texts achieve from these two baselines.
+    - `evaluate_spbleu.py`: Evaluation code for using spBLEU. spBLEU is based on the SentencePiece tokenizer and was suggested for language-agnostic evaluation. spBLEU can be calculated by using the `flores200` tokenizer available through `sacrebleu``. See the tokenizer integrated into the `sacrebleu` repository in [this file](https://github.com/mjpost/sacrebleu/blob/master/sacrebleu/tokenizers/tokenizer_spm.py).
     - `evaluate_comet.ipynb`: Evaluation code for using COMET scores.
         - COMET model: `Unbabel/wmt22-comet-da` model.
         - I used the pip package: https://pypi.org/project/unbabel-comet/ and `download_model`, `load_from_checkpoint`, but note that there are alternative ways to evaluating with COMET.
