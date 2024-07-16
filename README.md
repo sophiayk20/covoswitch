@@ -73,7 +73,7 @@ If you would like an intro to how you would pull CoVoSwitch from HuggingFace Dat
     - So code in this section calculates NMT evaluation scores for raw code-switched inputs and monolingual baselines, and then calculates deltas that system translations of code-switched texts achieve from these two baselines.
     - `evaluate_comet.ipynb`: Evaluation code for using COMET scores.
         - COMET model: `Unbabel/wmt22-comet-da` model.
-        - I used the pip package: https://pypi.org/project/unbabel-comet/ and `download_model``, `load_from_checkpoint`, but note that there are alternative ways to evaluating with COMET.
+        - I used the pip package: https://pypi.org/project/unbabel-comet/ and `download_model`, `load_from_checkpoint`, but note that there are alternative ways to evaluating with COMET.
 
 All code (except for Common Voice transcript generation) were run on Google Colab with a single NVIDIA L4 GPU. Jupyter notebooks have been converted to Python scripts to facilitate future use. I have also included shell scripts I used in this project in the directory `shell-scripts`. `tarzip_valid.sh` is a shell script that I used to transfer Common Voice audio files from local to Google Drive after zipping them into tar. 
 
