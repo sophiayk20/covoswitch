@@ -39,7 +39,7 @@ The code structure mostly matches the subsections of *Section 2: Synthetic Data 
         - 3. Common Voice filenames used (text): will be used as input to PSST for IU boundary-marked transcripts.
 - *Intermediate step: Move Common Voice files to Google Drive (skip this step if you're using GPU locally)*
     - `shell-scripts/tarzip_valid.sh`: is an example of how to zip local files. You can subsequently upload them into your remote workspace (like Google Drive for Colab).
-- **Intonation Unit Detection**: **detect_intonation_unit.py**
+- **Intonation Unit Detection**: **detect_IU.py**
     - With English Common Voice files, we generate English transcripts marked with intonation unit boundaries by PSST.
     - Usage: `python detect_IU.py --englishfilename "some English file path" --boundaryfilename "some boundary file path"`.
     - Creates intonation unit boundary-marked English transcriptions.
