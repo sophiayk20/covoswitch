@@ -77,7 +77,7 @@ If you would like an intro to how you would pull CoVoSwitch from HuggingFace Dat
         Spanish: Hola, mi nombre es Sophia y soy estudiante de la Universidad de Yale.
         Alignment: [(0, 0), (1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 6), (7, 6), (8, 7), (9, 7), (10, 8), (11, 12), (12, 9), (12, 10), (12, 11)]
         IU transcript: Hi, <|IU_Boundary|> my name is Sophia <|IU_Boundary|> and I am a student at Yale University.
-        source IU mapping: {0: [0], 1: [1, 2, 3, 4], 2: [5, 6, 7, 8, 9, 10, 11, 12]}
+        source {IU:token} mapping: {0: [0], 1: [1, 2, 3, 4], 2: [5, 6, 7, 8, 9, 10, 11, 12]}
         Replace English IU Indices: 0, 2
         Code-Switched Text: Hola, my name is Sophia y soy estudiante de la Universidad de Yale.
     ```
