@@ -71,7 +71,7 @@ If you would like an intro to how you would pull CoVoSwitch from HuggingFace Dat
     - Now with alignments extracted, we proceed to replace IUs. Specifically, this code does:
         - 1. create code-switched text
         - 2. print descriptive statistics (Total # generated, src percentage, tgt percentage, CMI, SPF) on code-switched data
-    - To illustrate the generation process with a simple English-Spanish example:
+    - To illustrate the generation process with a simple English-Spanish example (IU and alignment are made up here):
     ```
         English: Hi, my name is Sophia and I am a student at Yale University.
         Spanish: Hola, mi nombre es Sophia y soy estudiante de la Universidad de Yale.
