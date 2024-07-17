@@ -30,6 +30,11 @@ Keywords: code-switching, intonation units, machine translation, low-resource la
 
 Papers for all of these can be found in the references section of my paper.
 
+## The 13 Languages Studied in This Paper
+`Arabic (ar)`, `Catalan (ca)`, `Welsh (cy)`, `German (de)`, `Estonian (et)`, `Persian (fa)`, `Indonesian (id)`, `Latvian (lv)`, `Mongolian (mn)`, `Slovenian (sl)`, `Swedish (sv)`, `Tamil (ta)`, `Turkish (tr)`
+
+These languages are from the En->X subset of CoVoST 2. Note that Chinese and Japanese were excluded because they are `scriptio continua`, i.e. not whitespace-separated.
+
 ## Code Structure & Generation Pipeline
 The code structure mostly matches the subsections of *Section 2: Synthetic Data Generation* described in the paper.
 
