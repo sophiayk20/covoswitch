@@ -84,7 +84,8 @@ If you would like an intro to how you would pull CoVoSwitch from HuggingFace Dat
     - Run `python replace_IU.py --transcriptionsfolder "some transcriptions folder" --csfolder "some code-switching folder"` where `--transcriptionsfolder` is the folder that stores your `English and non-English transcriptions files` AND `alignment files`. `--csfolder` is the new directory that the code will write code-switched data to.
 - **Running Translation Models**:
     - I ran 4 translation experiments. `csw->En`, `csw->X`, `X->En` and `En->X`.
-    - NLLB-200 600M: `run_NLLB.py`
+    - M2M-100 418M: `run_M2M100.py`
+    - NLLB-200 600M: `run_NLLB200.py`
 - **Evaluating Translation Performance**:
     - There are two baselines, as described in section 3 of the paper.
         - 1. Raw Code-Switched Inputs
@@ -92,7 +93,7 @@ If you would like an intro to how you would pull CoVoSwitch from HuggingFace Dat
     - So code in this section calculates NMT evaluation scores for raw code-switched inputs and monolingual baselines, and then calculates deltas that system translations of code-switched texts achieve from these two baselines.
     - `chrf++ evaluation`: Can be done by `chrf = evaluate.load('chrf')` and setting word_order=2 in `results = chrf.compute(predictions=prediction, references=reference, word_order=2)`. See [this HuggingFace post](https://huggingface.co/spaces/evaluate-metric/chrf).
     - `evaluate_spbleu.py`: Evaluation code for using spBLEU. spBLEU is based on the SentencePiece tokenizer and was suggested for language-agnostic MT evaluation. spBLEU can be calculated by using the `flores200` tokenizer available through `sacrebleu`. See the tokenizer integrated into the `sacrebleu` repository in [this file](https://github.com/mjpost/sacrebleu/blob/master/sacrebleu/tokenizers/tokenizer_spm.py).
-    - `evaluate_comet.ipynb`: Evaluation code for using COMET scores.
+    - `evaluate_comet.py`: Evaluation code for using COMET scores.
         - COMET model: `Unbabel/wmt22-comet-da` model.
         - I used the pip package: https://pypi.org/project/unbabel-comet/ and `download_model`, `load_from_checkpoint`, but note that there are alternative ways to evaluating with COMET.
 
