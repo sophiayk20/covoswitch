@@ -7,7 +7,7 @@ CoVoSwitch, the dataset I created in this paper, is available through HuggingFac
 
 Link to paper: [to be included here, as soon as camera ready becomes available].
 
-Dataset: https://huggingface.co/sophiayk20/covoswitch.
+Dataset: https://huggingface.co/sophiayk20/covoswitch [also being uploaded as of 7/17]
 
 If you'd like to use this code or paper, please cite:
 ```
