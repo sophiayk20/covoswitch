@@ -74,6 +74,7 @@ If you would like an intro to how you would pull CoVoSwitch from HuggingFace Dat
         English: Hi, my name is Sophia. 
         Spanish: Hola, mi nombre es Sophia.
         Alignment: [(0, 0), (1, 1), (2, 2), (3, 3), (4, 4)]
+        IUs: Suppose all words are standalone IUs just for this example (they are not, in reality)
         Replace IU Indices: 0, 2
         Code-Switched Text: Hola, my nombre is Sophia.
     ```
