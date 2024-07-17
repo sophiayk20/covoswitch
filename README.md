@@ -26,7 +26,9 @@ Keywords: code-switching, intonation units, machine translation, low-resource la
 - **Multilingual Neural Machine Translation (MNMT) Models**: Meta's M2M-100 418M (2021), NLLB-200 600M (2022)
 - **Metrics**: chrF++ (2017, character level), spBLEU (2022, tokenized language-agnostic metric level), COMET (2022, models human judgments of translations).
 
-Citations to all of these can be found in the references section of my paper.
+- **Phonological Hierarchy**: [Here](https://en.wikipedia.org/wiki/Phonological_hierarchy) is an interesting Wikipedia article on phonological hierarchy.
+
+Papers for all of these can be found in the references section of my paper.
 
 ## Code Structure & Generation Pipeline
 The code structure mostly matches the subsections of *Section 2: Synthetic Data Generation* described in the paper.
@@ -71,6 +73,7 @@ If you would like an intro to how you would pull CoVoSwitch from HuggingFace Dat
         - 1. Raw Code-Switched Inputs
         - 2. Monolingual Translations
     - So code in this section calculates NMT evaluation scores for raw code-switched inputs and monolingual baselines, and then calculates deltas that system translations of code-switched texts achieve from these two baselines.
+    - `chrf evaluation`: Can be done by `chrf = evaluate.load('chrf')` and `results = chrf.compute(predictions=prediction, references=reference, word_order=2)`. See [this](https://huggingface.co/spaces/evaluate-metric/chrf) HuggingFace post.
     - `evaluate_spbleu.py`: Evaluation code for using spBLEU. spBLEU is based on the SentencePiece tokenizer and was suggested for language-agnostic MT evaluation. spBLEU can be calculated by using the `flores200` tokenizer available through `sacrebleu`. See the tokenizer integrated into the `sacrebleu` repository in [this file](https://github.com/mjpost/sacrebleu/blob/master/sacrebleu/tokenizers/tokenizer_spm.py).
     - `evaluate_comet.ipynb`: Evaluation code for using COMET scores.
         - COMET model: `Unbabel/wmt22-comet-da` model.
