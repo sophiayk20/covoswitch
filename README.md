@@ -3,11 +3,11 @@
 ## Paper & Dataset
 This repository holds code used in writing "CoVoSwitch: Machine Translation of Synthetic Code-Switched Text Based on Intonation Units," to appear in *Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics: Student Research Workshop*. Paper was accepted on July 9, 2024 for ACL-SRW 2024 (Aug. 11-16 2024).
 
-CoVoSwitch, the dataset I created in this paper, is available through HuggingFace. It was created using CoVoST 2, which is a speech-to-text translation dataset created in turn from Common Voice Corpus 4.0. 
+CoVoSwitch, the dataset I created in this paper, is available through HuggingFace. It was created using CoVoST 2, which is a speech-to-text translation dataset created in turn from Common Voice Corpus 4.0. *(It's a switched dataset, hence the name.)*
 
 Link to paper: [to be included here, as soon as camera ready becomes available].
 
-Dataset: https://huggingface.co/sophiayk/covoswitch.
+Dataset: https://huggingface.co/sophiayk20/covoswitch.
 
 If you'd like to use this code or paper, please cite:
 ```
