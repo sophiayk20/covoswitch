@@ -106,7 +106,7 @@ HuggingFace transformers - AutoTokenizer, AutoProcessor, AutoModel, AutoModelFor
 
 Audio libraries: librosa
 
-Quick Start: `pip install -r requirements.txt`
+**Quick Start**: `pip install -r requirements.txt`      
 Latest version of datasets is not compatible with unbabel-comet==2.0.0, so consider either using older version of datasets and unbabel-comet==2.0.0 or newer version of datasets and newer version of unbabel-comet.
 
 ## Paper Summary
