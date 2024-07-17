@@ -1,7 +1,7 @@
 # CoVoSwitch: Machine Translation of Synthetic Code-Switched Text Based on Intonation Units
 
 ## Paper & Dataset
-This repository holds code used in writing "CoVoSwitch: Machine Translation of Synthetic Code-Switched Text Based on Intonation Units," to be published in *Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics: Student Research Workshop*. Paper was accepted on July 9, 2024 for ACL-SRW 2024 (Aug. 11-16 2024).
+This repository holds code used in writing "CoVoSwitch: Machine Translation of Synthetic Code-Switched Text Based on Intonation Units," to appear in *Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics: Student Research Workshop*. Paper was accepted on July 9, 2024 for ACL-SRW 2024 (Aug. 11-16 2024).
 
 CoVoSwitch, the dataset I created in this paper, is available through HuggingFace. It was created using CoVoST 2, which is a speech-to-text translation dataset created in turn from Common Voice Corpus 4.0. 
 
@@ -11,7 +11,7 @@ Dataset: https://huggingface.co/sophiayk/covoswitch.
 
 If you'd like to use this code or paper, please cite:
 ```
-    Yeeun Kang. 2024. CoVoSwitch: Machine Translation of Synthetic Code-Switched Text Based on Intonation Units. In Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics: Student Research Workshop, pages -, Bangkok, Thailand. Association for Computational Linguistics. 
+    Yeeun Kang. 2024. CoVoSwitch: Machine Translation of Synthetic Code-Switched Text Based on Intonation Units. In Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics: Student Research Workshop, pages (TBD), Bangkok, Thailand. Association for Computational Linguistics. 
 ```
 ## Topics & Keywords
 Multilingual code-switching translation (NMT), prosodic speech segmentation (intonation unit detection) using Whisper (STT)
@@ -26,7 +26,7 @@ Keywords: code-switching, intonation units, machine translation, low-resource la
 - **Multilingual Neural Machine Translation (MNMT) Models**: Meta's M2M-100 418M (2021), NLLB-200 600M (2022)
 - **Metrics**: chrF++ (2017, character level), spBLEU (2022, tokenized language-agnostic metric level), COMET (2022, models human judgments of translations).
 
-- **Phonological Hierarchy**: [Here](https://en.wikipedia.org/wiki/Phonological_hierarchy) is an interesting Wikipedia article on phonological hierarchy. This paper and code deals with `2. Prosodic intonation unit (IU)` in the `Discourse analytical hierarchy` section.
+- **Phonological Hierarchy**: [Here](https://en.wikipedia.org/wiki/Phonological_hierarchy) is an interesting Wikipedia article on phonological hierarchy. This paper and code deals with `3. Prosodic intonation unit (IU)` in the `Discourse analytical hierarchy` section. A light Wikipedia introduction to `intonation units (IU)` can also be found [here](https://en.wikipedia.org/wiki/Prosodic_unit).
 
 Papers for all of these can be found in the references section of my paper.
 
