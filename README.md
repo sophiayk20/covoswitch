@@ -73,7 +73,7 @@ If you would like an intro to how you would pull CoVoSwitch from HuggingFace Dat
         - 1. Raw Code-Switched Inputs
         - 2. Monolingual Translations
     - So code in this section calculates NMT evaluation scores for raw code-switched inputs and monolingual baselines, and then calculates deltas that system translations of code-switched texts achieve from these two baselines.
-    - `chrf evaluation`: Can be done by `chrf = evaluate.load('chrf')` and `results = chrf.compute(predictions=prediction, references=reference, word_order=2)`. See [this](https://huggingface.co/spaces/evaluate-metric/chrf) HuggingFace post.
+    - `chrf++ evaluation`: Can be done by `chrf = evaluate.load('chrf')` and setting word_order=2 in `results = chrf.compute(predictions=prediction, references=reference, word_order=2)`. See [this HuggingFace post](https://huggingface.co/spaces/evaluate-metric/chrf).
     - `evaluate_spbleu.py`: Evaluation code for using spBLEU. spBLEU is based on the SentencePiece tokenizer and was suggested for language-agnostic MT evaluation. spBLEU can be calculated by using the `flores200` tokenizer available through `sacrebleu`. See the tokenizer integrated into the `sacrebleu` repository in [this file](https://github.com/mjpost/sacrebleu/blob/master/sacrebleu/tokenizers/tokenizer_spm.py).
     - `evaluate_comet.ipynb`: Evaluation code for using COMET scores.
         - COMET model: `Unbabel/wmt22-comet-da` model.
