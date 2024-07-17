@@ -83,6 +83,8 @@ If you would like an intro to how you would pull CoVoSwitch from HuggingFace Dat
     ```
     - Run `python replace_IU.py --transcriptionsfolder "some transcriptions folder" --csfolder "some code-switching folder"` where `--transcriptionsfolder` is the folder that stores your `English and non-English transcriptions files` AND `alignment files`. `--csfolder` is the new directory that the code will write code-switched data to.
 - **Running Translation Models**:
+    - I ran 4 translation experiments. `csw->En`, `csw->X`, `X->En` and `En->X`.
+    - NLLB-200 600M: `run_NLLB.py`
 - **Evaluating Translation Performance**:
     - There are two baselines, as described in section 3 of the paper.
         - 1. Raw Code-Switched Inputs
