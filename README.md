@@ -19,7 +19,7 @@ Multilingual code-switching translation (NMT), prosodic speech segmentation (int
 Keywords: code-switching, intonation units, machine translation, low-resource languages, speech-to-text, multilingual
 
 ## Theories, datasets, models, and metrics used in this paper
-- **Theories**: Matrix-Language Embedded Framework (1997), Intonation Unit Boundary Constraint (2023)
+- **Theories**: Matrix-Embedded Language Framework (1997), Intonation Unit Boundary Constraint (2023)
 - **Speech-to-Text Translation Dataset**: CoVoST 2 (2021, specifically the En->X subset), based on Common Voice Corpus 4.0 (2020)
 - **Intonation Unit Detection**: PSST (2023), based on Whisper (2023)
 - **Word-level text-to-text aligner**: awesome-align (2021)
