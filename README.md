@@ -65,7 +65,19 @@ If you would like an intro to how you would pull CoVoSwitch from HuggingFace Dat
         ├── ca.txt          # File that contains Catalan transcripts from CoVoST2, separated by newline.
         ├── cy.txt          # File that contains Welsh transcripts from CoVoST2, separated by newline.
         ```
-- **Intonation Unit Replacement**:
+- **Intonation Unit Replacement**: **replace_IU.py**
+    - Now with alignments extracted, we proceed to replace IUs. Specifically, this code does:
+        - 1. create code-switched text
+        - 2. print descriptive statistics (Total # generated, src percentage, tgt percentage, CMI, SPF) on code-switched data
+    - To illustrate the generation process with a simple English-Spanish example:
+    ```
+        English: Hi, my name is Sophia. 
+        Spanish: Hola, mi nombre es Sophia.
+        Alignment: [(0, 0), (1, 1), (2, 2), (3, 3), (4, 4)]
+        Replace IU Indices: 0, 2
+        Code-Switched Text: Hola, my nombre is Sophia.
+    ```
+    - Run `python replace_IU.py --transcriptionsfolder "some transcriptions folder" --csfolder "some code-switching folder"` where `--transcriptionsfolder` is the folder that stores your `English and non-English transcriptions files` AND `alignment files`. `--csfolder` is the new directory that the code will write code-switched data to.
 - **Dataset Evaluation and Analysis**:
 - **Running Translation Models**:
 - **Evaluating Translation Performance**:
