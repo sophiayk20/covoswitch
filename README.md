@@ -3,15 +3,23 @@
 ## Paper & Dataset
 This repository holds code used in writing "CoVoSwitch: Machine Translation of Synthetic Code-Switched Text Based on Intonation Units," to appear in *Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics: Student Research Workshop*. Paper was accepted on July 9, 2024 for ACL-SRW 2024 (Aug. 11-16 2024).
 
-CoVoSwitch, the dataset I created in this paper, is available through HuggingFace. It was created using CoVoST 2, which is a speech-to-text translation dataset created in turn from Common Voice Corpus 4.0. *(It's a switched dataset, hence the name...!)*
+**CoVoSwitch**, the dataset I created in this paper, is available through HuggingFace. It was created using CoVoST 2, which is a speech-to-text translation dataset created in turn from Common Voice Corpus 4.0. *(It's a switched dataset, hence the name...!)* Details of dataset distribution can be found in the paper, but data points roughly amount to *155k~158k rows* for each language once train, validation, and test sets are collated.
 
+**7/19/24 Update:**  
 Link to paper: [to be included here, as soon as camera ready becomes available].
 
-Dataset: https://huggingface.co/sophiayk20/covoswitch [also being uploaded as of 7/17]
+Dataset: [HuggingFace Dataset](https://huggingface.co/datasets/sophiayk20/covoswitch)
 
 If you'd like to use this code or paper, please cite:
 ```
-    Yeeun Kang. 2024. CoVoSwitch: Machine Translation of Synthetic Code-Switched Text Based on Intonation Units. In Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics: Student Research Workshop, pages (TBD), Bangkok, Thailand. Association for Computational Linguistics. 
+@inproceedings{
+    title={CoVoSwitch: Machine Translation of Synthetic Code-Switched Text Based on Intonation Units},  
+    author={Yeeun Kang},    
+    year={2024},    
+    booktitle={Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics: Student Research Workshop}, 
+    pages={TBD},    
+    publisher={Association for Computational Linguistics}   
+}
 ```
 ## Topics & Keywords
 Multilingual code-switching translation (NMT), prosodic speech segmentation (intonation unit detection) using Whisper (STT)
@@ -116,7 +124,7 @@ Latest version of datasets is not compatible with unbabel-comet==2.0.0, so consi
 
 ## Paper Summary
 There are 2 main code-switching linguistic theories I discovered while writing this paper. 
-- **Matrix-Language Embedded Framework (MLF)**: keeps one language as the matrix language and includes segments from an embedded language. 
+- **Matrix-Embedded Language Framework (MLF)**: keeps one language as the matrix language and includes segments from an embedded language. 
 - **Equivalence Constraint (EC) Theory**: grammatical structure present in one language must also exist in the other - as such, parsers are needed for code-switching text creation.
 
 One difficulty that comes with using the Equivalence Constraint is that it requires the use of constituency parsers. I found two parsers I could potentially use - the Stanford Parser and the Berkeley Neural Parser, but these only support a specific subset of languages. I realized that I could not use this approach to create code-switched text in unstudied languages, but found that the speech domain had datasets covering low-resource languages I wanted to study.
@@ -126,7 +134,7 @@ So instead I paid attention to a recent prosodic constraint established in EMNLP
 
 Meanwhile, I also found that OpenAI's STT model Whisper can be fine-tuned to detect English prosodic boundaries [the PSST model, published in CoNLL 2023](https://aclanthology.org/2023.conll-1.31/). This means that Whisper can segment an English utterance into intonation units. 
 
-Following the **Matrix-Language Embedded Framework** and the **Intonation Unit Boundary Constraint**, I synthesized code-switching text data by switching languages using intonation units as basis units.
+Following the **Matrix-Embedded Language Framework** and the **Intonation Unit Boundary Constraint**, I synthesized code-switching text data by switching languages using intonation units as basis units.
 
 ## Future Directions
 Before I graduate in May 2025, I plan to create a fleursswitch dataset, created from Google's FLEURS. This will also be made available through my HuggingFace profile. I am also experimenting with non-English language pairs, which I am partially presenting at *Interspeech YFRSW 2024* this year (Kos, Greece), but this is mainly based on the speech-to-speech modality. 
