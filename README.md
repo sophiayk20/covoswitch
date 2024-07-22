@@ -5,8 +5,8 @@ This repository holds code used in writing "CoVoSwitch: Machine Translation of S
 
 **CoVoSwitch**, the dataset I created in this paper, is available through HuggingFace. It was created using CoVoST 2, which is a speech-to-text translation dataset created in turn from Common Voice Corpus 4.0. *(It's a switched dataset, hence the name...!)* Details of dataset distribution can be found in the paper, but data points roughly amount to *155k~158k rows* for each language once train, validation, and test sets are collated.
 
-**7/19/24 Update:**  
-Link to paper: [to be included here, as soon as camera ready becomes available].
+**7/22/24 Update: Paper has been published in arXiv!**      
+Link to paper: [arXiv](https://arxiv.org/abs/2407.14295).
 
 Dataset: [HuggingFace Dataset](https://huggingface.co/datasets/sophiayk20/covoswitch)
 
