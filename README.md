@@ -28,8 +28,6 @@ If you'd like to use this code or paper, please cite:
     url = "https://aclanthology.org/2024.acl-srw.40",
     pages = "469--481",
 }
-
-
 ```
 ## Topics & Keywords
 Multilingual code-switching translation (NMT), prosodic speech segmentation (intonation unit detection) using Whisper (STT)
