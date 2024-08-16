@@ -5,6 +5,9 @@ This repository holds code used in writing "CoVoSwitch: Machine Translation of S
 
 **CoVoSwitch**, the dataset I created in this paper, is available through HuggingFace. It was created using CoVoST 2, which is a speech-to-text translation dataset created in turn from Common Voice Corpus 4.0. *(It's a switched dataset, hence the name...!)* Details of dataset distribution can be found in the paper, but data points roughly amount to *155k~158k rows* for each language once train, validation, and test sets are collated.
 
+**8/16/24 Update: Paper has been published in ACL Proceedings!**
+Link to paper: [ACL Anthology](https://aclanthology.org/2024.acl-srw.40/).
+
 **7/22/24 Update: Paper has been published in arXiv!**      
 Link to paper: [arXiv](https://arxiv.org/abs/2407.14295).
 
@@ -12,14 +15,21 @@ Dataset: [HuggingFace Dataset](https://huggingface.co/datasets/sophiayk20/covosw
 
 If you'd like to use this code or paper, please cite:
 ```
-@inproceedings{
-    title={CoVoSwitch: Machine Translation of Synthetic Code-Switched Text Based on Intonation Units},  
-    author={Yeeun Kang},    
-    year={2024},    
-    booktitle={Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics: Student Research Workshop}, 
-    pages={TBD},    
-    publisher={Association for Computational Linguistics}   
+@inproceedings{kang-2024-covoswitch,
+    title = "{C}o{V}o{S}witch: Machine Translation of Synthetic Code-Switched Text Based on Intonation Units",
+    author = "Kang, Yeeun",
+    editor = "Fu, Xiyan  and
+      Fleisig, Eve",
+    booktitle = "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 4: Student Research Workshop)",
+    month = aug,
+    year = "2024",
+    address = "Bangkok, Thailand",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.acl-srw.40",
+    pages = "469--481",
 }
+
+
 ```
 ## Topics & Keywords
 Multilingual code-switching translation (NMT), prosodic speech segmentation (intonation unit detection) using Whisper (STT)
